@@ -2,7 +2,7 @@
 
 This project provides a powerful framework for automating GitLab workflows using an AI agent. It features a **Model-Context-Protocol (MCP) server** with tools for standard GitLab API interactions (reading/writing files, creating issues) and a custom tool that leverages a Large Language Model (LLM) to **automatically fix bugs in code**.
 
-The key innovation is the use of the `mcp_use` library, which creates a standalone agent. This allows you to interact with the MCP server directly from a Python script, bypassing the need for integrated platforms like VS Code plugins or specific desktop applications.
+The key innovation is the use of the `mcp_use` library, which creates a standalone agent. This allows you to interact with the MCP server directly from a Python script, bypassing the need for closed-source agents like copilot,claude desktop.
 
 -----
 
