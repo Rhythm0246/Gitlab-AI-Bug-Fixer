@@ -135,3 +135,14 @@ if __name__ == "__main__":
     print("Multiplication:", multiply(3, 4))
     say_hello("Anish")
 ````
+## Future Works
+
+Sophisticated agents, such as GitHub Copilot integrated into an IDE, can perform **incremental tool calls**, chaining multiple tools together to resolve a complex request.
+An example of the desired future workflow for the standalone agent:
+
+1. **User Prompt**: "Fix the bug in `test.py` in the project `blanketcoder/dummy`."
+2. **Tool Call 1**: Agent decides to call `get_file_contents` for `test.py`.
+3. **Tool Call 2**: Agent uses the retrieved content to call `fix_bug_in_code`.
+4. **Tool Call 3**: Agent takes the fixed code and calls `create_or_update_file` to write it back to GitLab.
+```
+
