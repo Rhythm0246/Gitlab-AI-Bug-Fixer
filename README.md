@@ -66,12 +66,65 @@ python -m venv venv
 source venv/bin/activate
 pip install Flask together "mcp_use[all]" langchain-together
 ```
-Configure Environment:
+4. Configure Environment:
 
-    1. In index.js, ensure the path to your Node.js executable and the script are correct.
+  1. In index.js, ensure the path to your Node.js executable and the script are correct.
 
-    2. In demo.py, add your GitLab Personal Access Token to the config dictionary.
+  2. In demo.py, add your GitLab Personal Access Token to the config dictionary.
 
-    3. In py_api.py, add your Together AI API key where it says client = Together(api_key="...").
+  3. In py_api.py, add your Together AI API key where it says client = Together(api_key="...").
+
+
+## Usage
+The system requires two components to be running.
+
+  1.Start the Bug-Fix API Server:
+    Open a terminal and run the Flask app. This will host the /fix endpoint locally.
+
+    ```bash
+    python3 py_api.py
+    ```
+  2.Run the Agent:
+    Open a second terminal and run the demo script. It will start the MCP server and then prompt you to enter your bug-fixing query.
+
+    ```bash
+    python3 demo.py
+    ```
+## Example Session
+Running `python3 demo.py` will now prompt you for input
+ ```bash
+$ python3 demo.py
+Enter your Together API key: ****
+Enter your bug-fixing query (press Ctrl+D on a new line when done):
+I have a bug in my Python code. The bug is "Function arguments should be passed only once". Here is the code snippet:
+
+def add(x, y):
+    return x + y
+
+def call_with_duplicate_args():
+    result = add(10, x=5)  
+    print("Result:", result)
+
+2025-08-11 11:25:12,346 - mcp_use - INFO - 🧠 Agent ready with tools: create_or_update_file, search_repositories, create_repository, get_file_contents, push_files, create_issue, create_merge_request, fork_repository, create_branch, fix_bug_in_code
+2025-08-11 11:25:12,388 - mcp_use - INFO - ✨ Agent initialization complete
+2025-08-11 11:25:12,388 - mcp_use - INFO - 💬 Received query: 'I have a bug in my Python code. The bug is "Funct...'
+2025-08-11 11:25:12,388 - mcp_use - INFO - 🏁 Starting agent execution with max_steps=30
+2025-08-11 11:25:12,388 - mcp_use - INFO - 👣 Step 1/30
+2025-08-11 11:25:12,103 - mcp_use - INFO - 🔧 Tool call: fix_bug_in_code with input: {'bug_description': 'Function arguments should be passed only once', 'file_content': 'def add(x, ...
+2025-08-11 11:25:12,104 - mcp_use - INFO - 📄 Tool result: {   "status": "success",   "fixed_code": "def add(x, y):\n    return x + y\n\n\ndef call_with_duplicate_args():\n    result = add(10, 5)\n    print(\"Result:\", result)"}
+2025-08-11 11:25:12,104 - mcp_use - INFO - 👣 Step 2/30
+2025-08-11 11:25:12,944 - mcp_use - INFO - ✅ Agent finished at step 2
+2025-08-11 11:25:12,944 - mcp_use - INFO - 🎉 Agent execution complete
+
+Result: The corrected code snippet is:
+```python
+def add(x, y):
+    return x + y
+
+def call_with_duplicate_args():
+    result = add(10, 5)  
+    print("Result:", result)
+
+```
 
 
