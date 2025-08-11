@@ -22,7 +22,7 @@ async def main():
                 "/home/blanketcoder/mcp/node_modules/@modelcontextprotocol/server-gitlab/dist/index.js"
             ],
             "env": {
-                "GITLAB_PERSONAL_ACCESS_TOKEN": "glpat-VHCTteqcpYsqiSfezUEz",
+                "GITLAB_PERSONAL_ACCESS_TOKEN": "Enter your gitlab token",
                 "GITLAB_API_URL": "https://gitlab.com/api/v4"
             }
         }
