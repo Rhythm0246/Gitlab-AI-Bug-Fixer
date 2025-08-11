@@ -130,7 +130,7 @@ def fix_code():
     if not all([code, language, bug]):
         return jsonify({"error": "Missing required parameters"}), 400
 
-    client = Together(api_key="tgp_v1_bGXxRe27We8m8gvCxXqTNXVyI0KoXedOXEoY4bW_51I")
+    client = Together(api_key="enter your together token")
 
     result = fix_specific_bug_from_string(client, language, code, bug)
     return jsonify(result)
