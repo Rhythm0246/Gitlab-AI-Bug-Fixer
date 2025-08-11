@@ -135,6 +135,10 @@ if __name__ == "__main__":
     print("Multiplication:", multiply(3, 4))
     say_hello("Anish")
 ````
+## Demo Video
+
+https://github.com/user-attachments/assets/bab50705-9ffa-4d3a-9264-6467b986f9ee
+
 ## Future Works
 
 Sophisticated agents, such as GitHub Copilot integrated into an IDE, can perform **incremental tool calls**, chaining multiple tools together to resolve a complex request.
