@@ -101,7 +101,7 @@ The system requires two components to be running.
 
 Running `python3 demo.py` will produce the following output, showing the agent calling the `fix_bug_in_code` tool and returning the corrected code snippet.
 
-````bash
+````text
 $ python3 demo.py
 Enter your Together API key:
 2025-08-11 16:15:50,346 - mcp_use - INFO - 🧠 Agent ready with tools: create_or_update_file, search_repositories, create_repository, get_file_contents, push_files, create_issue, create_merge_request, fork_repository, create_branch, fix_bug_in_code
@@ -109,7 +109,7 @@ Enter your Together API key:
 2025-08-11 16:15:50,388 - mcp_use - INFO - 💬 Received query: ' I have a bug in the following code snippet writte...'
 2025-08-11 16:15:50,388 - mcp_use - INFO - 🏁 Starting agent execution with max_steps=30
 2025-08-11 16:15:50,388 - mcp_use - INFO - 👣 Step 1/30
-2025-08-11 16:16:36,103 - mcp_use - INFO - 🔧 Tool call: fix_bug_in_code with input: {'bug_description': 'Function arguments should be passed only once', 'file_content': 'def add(x, ...''
+2025-08-11 16:16:36,103 - mcp_use - INFO - 🔧 Tool call: fix_bug_in_code with input: {'bug_description': 'Function arguments should be passed only once', 'file_content': 'def add(x, ...
 2025-08-11 16:16:36,104 - mcp_use - INFO - 📄 Tool result: {   "status": "success",   "fixed_code": "def add(x, y):\n    return x + y\n\n\ndef multiply(x, y...}
 2025-08-11 16:16:36,104 - mcp_use - INFO - 👣 Step 2/30
 2025-08-11 16:16:50,944 - mcp_use - INFO - ✅ Agent finished at step 2
