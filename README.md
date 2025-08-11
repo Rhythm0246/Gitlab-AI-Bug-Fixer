@@ -1,4 +1,4 @@
-# GitLab AI Bug-Fixer 🤖
+# GitLab AI Bug-Fixer
 
 This project provides a powerful framework for automating GitLab workflows using an AI agent. It features a **Model-Context-Protocol (MCP) server** with tools for standard GitLab API interactions (reading/writing files, creating issues) and a custom tool that leverages a Large Language Model (LLM) to **automatically fix bugs in code**.
 
@@ -6,7 +6,7 @@ The key innovation is the use of the `mcp_use` library, which creates a standalo
 
 -----
 
-## How It Works ⚙️
+## How It Works
 
 The architecture consists of several components working in tandem:
 
@@ -25,7 +25,7 @@ The workflow is as follows:
 
 -----
 
-## Features ✨
+## Features
 
 - **GitLab Automation**: Programmatically interact with GitLab repositories.
   - Create, read, and update files (`create_or_update_file`, `get_file_contents`).
@@ -36,7 +36,7 @@ The workflow is as follows:
 
 -----
 
-## Prerequisites 📋
+## Prerequisites
 
 - **Node.js**: To run the MCP server.
 - **Python 3.7+**: To run the Bug-Fix API and the demo agent.
@@ -45,7 +45,7 @@ The workflow is as follows:
 
 -----
 
-## Installation & Setup 🛠️
+## Installation & Setup
 
 1. **Clone the repository**:
 
@@ -77,7 +77,7 @@ The workflow is as follows:
 
 -----
 
-## Usage 🚀
+## Usage
 
 The system requires two components to be running.
 
