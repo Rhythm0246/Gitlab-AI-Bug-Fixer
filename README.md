@@ -145,4 +145,4 @@ An example of the desired future workflow for the standalone agent:
 3. **Tool Call 2**: Agent uses the retrieved content to call `fix_bug_in_code`.
 4. **Tool Call 3**: Agent takes the fixed code and calls `create_or_update_file` to write it back to GitLab.
 
-
+<img width="1567" height="1080" alt="Image" src="https://github.com/user-attachments/assets/15f6521d-003e-483c-9375-f91797ad0d0e" />
