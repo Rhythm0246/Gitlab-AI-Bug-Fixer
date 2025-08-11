@@ -144,5 +144,5 @@ An example of the desired future workflow for the standalone agent:
 2. **Tool Call 1**: Agent decides to call `get_file_contents` for `test.py`.
 3. **Tool Call 2**: Agent uses the retrieved content to call `fix_bug_in_code`.
 4. **Tool Call 3**: Agent takes the fixed code and calls `create_or_update_file` to write it back to GitLab.
-```
+
 
