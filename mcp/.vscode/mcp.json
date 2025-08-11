@@ -1,0 +1,28 @@
+{
+  "servers": {
+    "gitlab": {
+      "command": "/home/blanketcoder/.nvm/versions/node/v22.17.0/bin/node",
+      "args": [
+        "node_modules/@modelcontextprotocol/server-gitlab/dist/index.js"
+      ],
+      "env": {
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "${input:gitlab_token}",
+        "GITLAB_API_URL": "${input:gitlab_url}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "gitlab_token",
+      "description": "GitLab Personal Access Token",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "gitlab_url",
+      "description": "GitLab API URL (optional, default: https://gitlab.com/api/v4)",
+      "default": "https://gitlab.com/api/v4"
+    }
+  ]
+}
